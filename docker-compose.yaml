@@ -1,0 +1,12 @@
+version: '3'
+services:
+  springboot-docker:
+      image: registry.ymo.com:5000/springboot-docker
+      container_name: springboot-docker
+      ports:
+        - "8001:8001"
+      environment:
+        - TZ=Asia/Shanghai
+      volumes:
+        - /usr/share/zoneinfo/Asia/Shanghai:/usr/share/zoneinfo/Asia/Shanghai:ro
+        - /etc/localtime:/etc/localtime:ro
